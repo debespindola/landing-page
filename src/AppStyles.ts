@@ -51,7 +51,7 @@ export const Name = styled.h1`
   font-style: normal;
   font-weight: bold;
   font-size: 3rem;
-  line-height: 4rem;
+  line-height: 100%;
   
   margin: 0;
   color: ${colors.darkPink};
@@ -92,10 +92,11 @@ export const TextsWrapper = styled.div`
   grid-template-rows: repeat(3, auto);
   grid-gap: 10px;
 
-  padding: 60px;
+  padding: 35px 0 0 35px;
 
   @media(min-width: 700px) {
     grid-gap: 15px;
+    padding: 60px;
   }
 
   @media(min-width: 1200px) {

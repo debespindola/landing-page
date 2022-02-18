@@ -7,6 +7,10 @@ import {
   TextsWrapper,
 } from './AppStyles';
 
+import SocialMediaButton from './components/socialMediaButton';
+
+import instagram from './assets/images/instagram.svg';
+
 const App = () => {
   return (
     <AppContainer>
@@ -27,6 +31,12 @@ const App = () => {
           falo sobre lifestyle {'&&'} curiosidades do mundo da 
           computação nas horas vagas.
         </Description>
+
+        <SocialMediaButton 
+          label='instagram'
+          link='https://www.instagram.com/debespindola/'
+          iconUrl={instagram}
+        />
       </TextsWrapper>
     </AppContainer>
   );
