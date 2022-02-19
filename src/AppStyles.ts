@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import illustration from './assets/images/illustration.png';
 import { colors } from './assets/theme';
 
@@ -8,7 +8,16 @@ export const AppContainer = styled.section`
 
   position: relative;
 
-  background: linear-gradient(117.23deg, #FF96A1 39.78%, #AB2938 88.43%);
+  background: linear-gradient(117.23deg, ${colors.lightPink} 39.78%, ${colors.mainPink} 88.43%);
+  overflow: hidden;
+`;
+
+const showImage = keyframes`
+  from {
+    bottom: -100vh;
+  } to {
+    bottom: 0;
+  }
 `;
 
 export const AvatarIllustration = styled.img.attrs({
@@ -19,6 +28,8 @@ export const AvatarIllustration = styled.img.attrs({
   position: absolute;
   bottom: 0;
   right: 0;
+
+  animation: ${showImage} 1s;
 
   @media(min-width: 700px) {
     width: 400px;
@@ -87,12 +98,24 @@ export const Description = styled.p`
   }
 `;
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+`;
+
 export const TextsWrapper = styled.div`
   display: grid;
   grid-template-rows: repeat(3, auto);
   grid-gap: 10px;
 
   padding: 35px 0 0 35px;
+
+  opacity: 1;
+
+  animation: ${fadeIn} 2s;
 
   @media(min-width: 700px) {
     grid-gap: 15px;

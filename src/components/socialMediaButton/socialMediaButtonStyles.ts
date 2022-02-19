@@ -11,8 +11,7 @@ export const SocialMediaButton = styled.a`
 
   border-radius: 8px;
 
-  width: 135px;
-  height: 40px;   
+  width: fit-content;
   padding: 15px;
 
   box-shadow: 3px 8px 40px rgba(0, 0, 0, 0.1);
@@ -26,21 +25,21 @@ export const SocialMediaButton = styled.a`
   border: none;
   cursor: pointer;
 
+  transition: box-shadow 0.3s;
+
   &:hover, &:focus {
     color: ${colors.darkPink};
     box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
   }
 
   @media(min-width: 700px) {
-    width: 150px;
-    height: 50px;
-
     font-size: 1rem;
   }
 `;
 
 export const ButtonIcon = styled.img`
   width: 1.1rem;
+  margin-right: 10px;
 
   @media(min-width: 700px) {
     width: 1.3rem;
