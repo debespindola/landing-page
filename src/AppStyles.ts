@@ -111,7 +111,7 @@ export const TextsWrapper = styled.div`
   grid-template-rows: repeat(3, auto);
   grid-gap: 10px;
 
-  padding: 35px 0 0 35px;
+  padding: 35px;
 
   opacity: 1;
 
@@ -119,10 +119,68 @@ export const TextsWrapper = styled.div`
 
   @media(min-width: 700px) {
     grid-gap: 15px;
-    padding: 60px;
+    padding: 40px 60px;
   }
 
   @media(min-width: 1200px) {
     grid-gap: 20px;
   }
+`;
+
+export const OtherMediasWrapper = styled.div`
+  padding: 0 0 0 35px;
+
+  @media(min-width: 700px) {
+    padding: 0 0 0 60px;
+  }
+`;
+
+export const OtherMediasText = styled.p`
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+
+  color: ${colors.darkPink};
+
+  @media(min-width: 700px) {
+    font-size: 0.9rem;
+  }
+
+  @media(min-width: 1200px) {
+    font-size: 1rem;
+  }
+`;
+
+export const OtherMediasIconsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 20px;
+  place-items: center;
+
+  width: fit-content;
+
+  @media(min-width: 700px) {
+    grid-gap: 30px;
+  }
+
+  @media(min-width: 1200px) {
+    grid-gap: 40px;
+  }
+`; 
+
+export const MediaIcon = styled.img`
+  width: 1.3rem;
+  
+  @media(min-width: 700px) {
+    width: 1.5rem;
+  }
+
+  @media(min-width: 1200px) {
+    width: 2rem;
+  }
+`;
+
+export const SocialMediaLink = styled.a`
+
 `;
