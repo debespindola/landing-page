@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import illustration from './assets/images/illustration.png';
 import { colors } from './assets/theme';
+import { Link } from 'react-router-dom';
 
 export const AppContainer = styled.section`
   width: 100%;
@@ -181,6 +182,29 @@ export const MediaIcon = styled.img`
   }
 `;
 
-export const SocialMediaLink = styled.a`
+export const SocialMediaLink = styled.a``;
 
+export const LanguageLinksWrapper = styled.div`
+  position: absolute;
+  right: 30px;
+  top: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 15px;
+`;
+
+export const LanguageLink = styled(Link)`
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+
+  color: ${colors.lightPink};
+  transition: text-shadow 0.150s;
+  
+  &:hover {
+    color: ${colors.lightPink};
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
+  }
 `;

@@ -10,6 +10,8 @@ import {
   OtherMediasIconsWrapper,
   MediaIcon,
   SocialMediaLink,
+  LanguageLink,
+  LanguageLinksWrapper,
 } from './AppStyles';
 
 import SocialMediaButton from './components/socialMediaButton';
@@ -20,14 +22,26 @@ import linkedin from './assets/images/linkedin.svg';
 import github from './assets/images/github.svg';
 import email from './assets/images/email.svg';
 
+import {
+  useParams,
+} from "react-router-dom";
+
 const App = () => {
+  const { lang } = useParams();
+  const isEnglish = lang === 'en';
+  
   return (
     <AppContainer>
       <AvatarIllustration />
 
+      <LanguageLinksWrapper>
+        <LanguageLink to={'/'}>PT</LanguageLink>
+        <LanguageLink to={'/en'}>EN</LanguageLink>
+      </LanguageLinksWrapper>
+
       <TextsWrapper>
         <Greetings>
-          olá, meu nome é
+          {isEnglish ? 'hello, my name is' : 'olá, meu nome é'}
         </Greetings>
 
         <Name>
@@ -36,9 +50,14 @@ const App = () => {
         </Name>
 
         <Description>
-          programo software na maior parte do tempo e 
-          falo sobre lifestyle {'&&'} curiosidades do mundo da 
-          computação nas horas vagas.
+          {isEnglish ?
+            `I program software most of the time &&
+            talk about lifestyle and curiosities of 
+            the computer science world in my spare time.` 
+            :`programo software na maior parte do tempo e 
+            falo sobre lifestyle && curiosidades do mundo da 
+            computação nas horas vagas.`
+          }
         </Description>
 
         <SocialMediaButton 
@@ -50,7 +69,7 @@ const App = () => {
 
       <OtherMediasWrapper>
         <OtherMediasText>
-          outras redes
+        {isEnglish ? 'other medias' : 'outras redes'}
         </OtherMediasText>
 
         <OtherMediasIconsWrapper>
