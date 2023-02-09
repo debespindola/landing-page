@@ -11,8 +11,8 @@ export const CardWrapper = styled.div`
   width: 100%;  
   height: 100%;
 
-  max-width: 350px;
-  max-height: 200px;
+  min-width: 350px;
+  min-height: 200px;
 
   padding: 24px;
   border-radius: 4px;

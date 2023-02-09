@@ -1,24 +1,18 @@
 import {
+  GlobalStyle,
   AppContainer,
-  Name,
-  Description,
-  TextsWrapper,
-} from './AppStyles';
+} from './styles';
+import Heading from './sections/heading';
+import Projects from './sections/projects';
 
 
 const App = () => {
-  
   return (
     <AppContainer>
-      <TextsWrapper>
-        <Name>
-          DEBORAH ESPÍNDOLA
-        </Name>
+      <Heading />
+      <Projects />
 
-        <Description>
-          Software Engineer
-        </Description>
-      </TextsWrapper>
+      <GlobalStyle />
     </AppContainer>
   );
 }

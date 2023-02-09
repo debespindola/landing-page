@@ -29,21 +29,23 @@ const Card: FC<CardProps> = ({
       <Title>{title}</Title>
       <Description>{description}</Description>
       
-      <Tags>
-        {tags.map((
-          tag: {
-            color: keyof typeof tagColors;
-            label: string;
-          }, 
-          index: number
-        ) => (
-          <Tag 
-            key={`${tag.label}-${index}`} 
-            label={tag.label} 
-            color={tag.color} 
-          />
-        ))}
-      </Tags>
+      {tags.length > 0 && (
+        <Tags>
+          {tags.map((
+            tag: {
+              color: keyof typeof tagColors;
+              label: string;
+            }, 
+            index: number
+          ) => (
+            <Tag 
+              key={`${tag.label}-${index}`} 
+              label={tag.label} 
+              color={tag.color} 
+            />
+          ))}
+        </Tags>
+      )}
     </CardWrapper>
   );
 };

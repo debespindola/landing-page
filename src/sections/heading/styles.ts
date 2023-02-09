@@ -1,12 +1,10 @@
-import styled, { keyframes } from 'styled-components';
-import { colors } from './assets/theme';
+import styled from 'styled-components';
+import { colors } from '../../assets/theme';
 
-export const AppContainer = styled.section`
-  width: 100%;
-  min-height: 100vh;
-
-  background: ${colors.darkGrey};
-  padding: 72px;
+export const HeadingContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 `;
 
 export const Name = styled.h1`
@@ -31,7 +29,7 @@ export const Name = styled.h1`
   }
 `;
 
-export const Description = styled.p`
+export const Subtitle = styled.p`
   font-family: 'Montserrat Alternates', sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -53,20 +51,39 @@ export const Description = styled.p`
   }
 `;
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 `;
 
-export const TextsWrapper = styled.div`
+export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 8px;
 
-  opacity: 1;
-  animation: ${fadeIn} 2s;
-`;
+  width: 100%;
+`; 
+
+export const Description = styled.span`
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.5rem;
+  
+  margin: 0;
+  width: 50%;
+
+  color: ${colors.white};
+
+  @media(min-width: 700px) {
+    font-size: 0.9rem;
+    width: 70%;
+  }
+
+  @media(min-width: 1200px) {
+    font-size: 1.1rem;
+    width: 50%;
+  }
+`; 
 
