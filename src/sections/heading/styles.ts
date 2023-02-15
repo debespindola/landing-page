@@ -87,3 +87,8 @@ export const Description = styled.span`
   }
 `; 
 
+export const LinkWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+`;

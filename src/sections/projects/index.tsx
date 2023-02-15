@@ -1,8 +1,9 @@
 import axios from "axios";
 import { FC, useEffect, useState } from "react";
 import Card from "../../components/card";
+import Link from "../../components/link";
 import {
-  SectionWrapper, Title, CardsWrapper,
+  SectionWrapper, Title, CardsWrapper, Credits, HeadingWrapper,
 } from './styles';
 
 const Projects: FC = () => {
@@ -12,9 +13,9 @@ const Projects: FC = () => {
     try {
       const { data } = await axios.get('https://api.github.com/users/debespindola/repos');
 
-      const filteredData = data.filter((project: any) => (
-        (project.private === false && project.fork === false) && project.name !== 'debespindola'
-      ));
+      const reposIds = [326241135, 275604070, 526286461, 325075954, 386487872, 415140910]
+
+      const filteredData = data.filter((repo: any) => reposIds.includes(repo?.id));
       
       setProjects(filteredData);
     } catch (error) {
@@ -28,7 +29,10 @@ const Projects: FC = () => {
 
   return (
     <SectionWrapper>
-      <Title>Projects</Title>
+      <HeadingWrapper>
+        <Title>Projects</Title>
+        <Link href="https://github.com/debespindola">see more on my github</Link>
+      </HeadingWrapper>
 
       <CardsWrapper>
         {projects?.map((project: any) => {
@@ -46,6 +50,8 @@ const Projects: FC = () => {
             />
         )})}
       </CardsWrapper>
+
+      <Credits>enhanced by Github REST API</Credits>
     </SectionWrapper>
   )
 };

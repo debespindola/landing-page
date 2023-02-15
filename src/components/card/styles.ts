@@ -18,7 +18,7 @@ export const CardWrapper = styled.div`
   border-radius: 4px;
 
   background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
 `;
 
 export const Title = styled.span`

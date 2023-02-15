@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle }  from 'styled-components';
+import styled, { createGlobalStyle, keyframes }  from 'styled-components';
 import { colors } from './assets/theme';
 
 export const GlobalStyle = createGlobalStyle`
@@ -22,7 +22,6 @@ export const AppContainer = styled.section`
 
   display: flex;
   flex-direction: column;
-  row-gap: 144px;
+  row-gap: 224px;
 `;
-
 
