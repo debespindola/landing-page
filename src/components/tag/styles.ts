@@ -26,7 +26,7 @@ export const Bullet = styled.div<{color: keyof typeof tagColors}>`
 
 export const Label = styled.span`
   font-family: 'Montserrat Alternates';
-  font-style: normal;
+  
   font-weight: 700;
   font-size: 0.8rem;
 

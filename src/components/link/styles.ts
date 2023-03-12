@@ -7,16 +7,13 @@ export const LinkAnchor = styled.a`
   column-gap: 4px;
 
   font-family: 'Montserrat Alternates';
-  font-style: normal;
+  
   font-weight: 700;
-  font-size: 0.6rem;
+  font-size: 1rem;
   line-height: 22px;
+  text-decoration-line: underline;
 
   color: #FEFEFE;
-
-  @media(min-width: 700px) {
-    font-size: 0.8rem;
-  }
 
   @media(min-width: 1200px) {
     font-size: 1.1rem;

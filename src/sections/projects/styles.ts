@@ -7,7 +7,6 @@ export const SectionWrapper = styled.section`
   align-items: center;
   
   width: 100%;
-  height: 100%;
 
   row-gap: 24px;
   position: relative;
@@ -24,10 +23,8 @@ export const HeadingWrapper = styled.div`
 `;
 
 export const Title = styled.span`
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-style: normal;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 100%;
 
   width: 100%;
@@ -35,10 +32,6 @@ export const Title = styled.span`
   
   margin: 0;
   color: ${colors.lighterPink};
-
-  @media(min-width: 700px) {
-    font-size: 1.8rem;
-  }
 
   @media(min-width: 1200px) {
     font-size: 2rem;
@@ -53,14 +46,18 @@ export const CardsWrapper = styled.div`
 
   width: 100%;
   height: fit-content;
+
+  @media(max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
 `;
 
 export const Credits = styled.span`
   font-family: 'Montserrat Alternates';
-
-  font-style: normal;
+  
   font-weight: 700;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   line-height: 20px;
 
   color: rgba(255, 255, 255, 0.5);
@@ -68,12 +65,4 @@ export const Credits = styled.span`
   width: 100%;
   height: fit-content;
   text-align: end;
-
-  @media(min-width: 700px) {
-    font-size: 0.6rem;
-  }
-
-  @media(min-width: 1200px) {
-    font-size: 0.8rem;
-  }
 `;

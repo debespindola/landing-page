@@ -8,10 +8,8 @@ export const HeadingContainer = styled.section`
 `;
 
 export const Name = styled.h1`
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-style: normal;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 100%;
   
   margin: 0;
@@ -29,25 +27,17 @@ export const Name = styled.h1`
   }
 `;
 
-export const Subtitle = styled.p`
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-style: normal;
+export const Subtitle = styled.h2`
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.5rem;
   
   margin: 0;
-  width: 70%;
+  width: 100%;
 
   color: ${colors.lighterPink};
 
-  @media(min-width: 700px) {
-    font-size: 1.5rem;
-    width: 70%;
-  }
-
   @media(min-width: 1200px) {
     font-size: 2rem;
-    width: 50%;
   }
 `;
 
@@ -66,14 +56,10 @@ export const DescriptionWrapper = styled.div`
 `; 
 
 export const Description = styled.span`
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-style: normal;
   font-weight: 300;
-  font-size: 0.5rem;
+  font-size: 1rem;
   
   margin: 0;
-  width: 50%;
-
   color: ${colors.white};
 
   @media(min-width: 700px) {

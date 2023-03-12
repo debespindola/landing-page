@@ -17,15 +17,17 @@ interface CardProps {
     color: keyof typeof tagColors;
     label: string;
   }[];
+  href: string; 
 }
 
 const Card: FC<CardProps> = ({
   title,
   description,
   tags,
+  href,
 }) => {
   return (
-    <CardWrapper>
+    <CardWrapper href={href} target="_blank">
       <Title>{title}</Title>
       <Description>{description}</Description>
       
